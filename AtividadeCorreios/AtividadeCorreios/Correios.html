@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Temos nosso conteudo ocupando todo o espa�o da viewport -->
+    <div class="container-fluid h-100">
+        <!-- Aqui temos nossa primeira linha do site -->
+        <div class="row d-flex align-content-center justify-content-center h-100">
+            <!-- Aqui crio o separador "div" e sinalizo que o mesmo ir� -->
+            <!-- Usar apenas 3/12 de nossa area total disponivel -->
+            <div class="col-md-3">
+                <form name="formenviar" method="get" send-post="teste">
+                    <div class="row">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Cep:</span>
+                            </div>
+                            <input type="text" class="form-control" name="origem" placeholder="Informe cep de origem" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Cep:</span>
+                            </div>
+                            <input type="text" class="form-control" name="destino" placeholder="Informe cep de destino" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <input type="button" class="w-100 btn btn-success form-group" name="bntconsultar" value="Consultar" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="Scripts/jquery-3.0.0.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/popper.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

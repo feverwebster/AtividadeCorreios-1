@@ -1,15 +1,156 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
 </head>
 <body>
-   Codando muito aqui!
-    <script>
-        //Codigo sombrio muhahahhahaha! 
-        alert("Você é o  9999999 usuário a entrar neste site, retire seu iphone");
-    </script>
-     <script>alert("Codigo supremo");</script>
+    <!-- Temos nosso conteudo ocupando todo o espa�o da viewport -->
+    <div class="container-fluid h-100">
+        <!-- Aqui temos nossa primeira linha do site -->
+        <div class="row d-flex align-content-center justify-content-center h-100">
+            <!-- Aqui crio o separador "div" e sinalizo que o mesmo ir� -->
+            <!-- Usar apenas 3/12 de nossa area total disponivel -->
+            <div class="col-md-3">
+                <form name="formenviar" method="get" send-post="correiosambev">
+                    <div class="row">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Cep:</span>
+                            </div>
+                            <input type="text" class="form-control" name="sCepOrigem" placeholder="Informe cep de origem" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Cep:</span>
+                            </div>
+                            <input type="text" class="form-control" name="sCepDestino" placeholder="Informe cep de destino" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Peso:</span>
+                            </div>
+                            <input type="text" class="form-control" name="nVlPeso" placeholder="Informe peso" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Formato:</span>
+                            </div>
+                            <input type="text" class="form-control" name="nCdFormato" placeholder="Informe formato" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Comprimento:</span>
+                            </div>
+                            <input type="text" class="form-control" name="nVlComprimento" placeholder="Informe comprimento" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Altura:</span>
+                            </div>
+                            <input type="text" class="form-control" name="nVlAltura" placeholder="Informe altura" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Largura:</span>
+                            </div>
+                            <input type="text" class="form-control" name="nVlLargura" placeholder="Informe largura" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Diametro:</span>
+                            </div>
+                            <input type="text" class="form-control" name="nVlDiametro" placeholder="Informe diametro" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Mão:</span>
+                            </div>
+                            <input type="text" class="form-control" name="sCdMaoPropria" placeholder="Informe se contem mão propria" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Valor:</span>
+                            </div>
+                            <input type="text" class="form-control" name="nVlValorDeclarado" placeholder="Informe o valor da mercadoria" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Aviso:</span>
+                            </div>
+                            <input type="text" class="form-control" name="sCdAvisoRecebimento" placeholder="Informe se tera aviso de recebimento" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Retorno:</span>
+                            </div>
+                            <input type="text" class="form-control" name="StrRetorno" placeholder="Informe informe o tipo de retorno xml" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Cod:</span>
+                            </div>
+                            <input type="text" class="form-control" name="nCdServico" placeholder="Informe o codigo do serviço" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <input type="button" class="w-100 btn btn-success form-group" name="bntconsultar" value="Consultar" data-toggle="modal" data-target="#exampleModal" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Resultado</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p name="Valor"></p>
+                    <p name="PrazoEntrega"></p>
+                    <p name="ValorSemAdicionais"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Scripts/jquery-3.0.0.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/popper.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
